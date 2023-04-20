@@ -32,6 +32,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.AddTaskButton = new System.Windows.Forms.Button();
             this.TaskList = new System.Windows.Forms.ListBox();
+            this.CompTaskBox = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ClearCompButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // AddTaskBox
@@ -65,18 +70,75 @@
             // TaskList
             // 
             this.TaskList.FormattingEnabled = true;
-            this.TaskList.Location = new System.Drawing.Point(209, 96);
+            this.TaskList.Location = new System.Drawing.Point(58, 96);
             this.TaskList.Name = "TaskList";
             this.TaskList.ScrollAlwaysVisible = true;
             this.TaskList.Size = new System.Drawing.Size(408, 290);
             this.TaskList.TabIndex = 6;
             this.TaskList.DoubleClick += new System.EventHandler(this.RemoveItem);
             // 
+            // CompTaskBox
+            // 
+            this.CompTaskBox.FormattingEnabled = true;
+            this.CompTaskBox.Location = new System.Drawing.Point(542, 96);
+            this.CompTaskBox.Name = "CompTaskBox";
+            this.CompTaskBox.Size = new System.Drawing.Size(182, 290);
+            this.CompTaskBox.TabIndex = 7;
+            this.CompTaskBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickInComp);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(206, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 17);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Tasks To Do";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label3.Location = new System.Drawing.Point(588, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 17);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Tasks Done";
+            // 
+            // ClearCompButton
+            // 
+            this.ClearCompButton.BackColor = System.Drawing.Color.MistyRose;
+            this.ClearCompButton.Location = new System.Drawing.Point(542, 392);
+            this.ClearCompButton.Name = "ClearCompButton";
+            this.ClearCompButton.Size = new System.Drawing.Size(182, 23);
+            this.ClearCompButton.TabIndex = 10;
+            this.ClearCompButton.Text = "Clear Completed Tasks";
+            this.ClearCompButton.UseVisualStyleBackColor = false;
+            this.ClearCompButton.Click += new System.EventHandler(this.ClearCompButton_Click);
+            this.ClearCompButton.MouseEnter += new System.EventHandler(this.ClearCompButton_Enter);
+            this.ClearCompButton.MouseLeave += new System.EventHandler(this.ClearCompButton_Leave);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(45, 402);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(431, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Double click to remove an item. Click in the tasks done box to move the selcted i" +
+    "tem there";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.ClearCompButton);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.CompTaskBox);
             this.Controls.Add(this.TaskList);
             this.Controls.Add(this.AddTaskButton);
             this.Controls.Add(this.label1);
@@ -95,6 +157,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button AddTaskButton;
         private System.Windows.Forms.ListBox TaskList;
+        private System.Windows.Forms.ListBox CompTaskBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button ClearCompButton;
+        private System.Windows.Forms.Label label4;
     }
 }
 
