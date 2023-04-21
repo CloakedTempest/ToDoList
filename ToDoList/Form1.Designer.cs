@@ -122,12 +122,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 402);
+            this.label4.Location = new System.Drawing.Point(12, 428);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(431, 13);
+            this.label4.Size = new System.Drawing.Size(570, 13);
             this.label4.TabIndex = 11;
             this.label4.Text = "Double click to remove an item. Click in the tasks done box to move the selcted i" +
-    "tem there";
+    "tem there. Enter works with the textbox";
             // 
             // Form1
             // 
