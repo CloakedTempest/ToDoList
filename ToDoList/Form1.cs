@@ -15,8 +15,8 @@ namespace ToDoList
     {
         List<string> ToDo = new List<string>();
         List<string> completedList = new List<string>();
-        string path1 = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory) + "/Resources/ToDoText.txt";
-        string path2 = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory) + "/Resources/CompleText.txt";
+        string path1 = System.IO.Directory.GetParent(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString() + "/Resources/ToDoText.txt";
+        string path2 = System.IO.Directory.GetParent(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString() + "/Resources/CompleText.txt";
 
         public Form1()
         {
